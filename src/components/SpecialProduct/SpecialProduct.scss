@@ -1,0 +1,93 @@
+@import '../../style.scss'; // Корневые стили
+
+.specialProduct {
+    margin-top: 64px;
+    .specialProduct__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        color: $black;
+    }
+    .specialProduct__wrapper {
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .specialProduct__item {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            .specialProduct__img {
+                width: fit-content;
+            }
+            .specialProduct__name {
+                margin-top: 10px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: $black;
+            }
+            .specialProduct__subname {
+                margin-top: 9px;
+                max-width: 379px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: $grey;
+            }
+            .specialProductText {
+                margin-top: 12px;
+                display: flex;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                .specialProduct__price {
+                    color: $black;
+                    margin: 0 30px 0 0;
+                }
+                .specialProduct__specialPrise {
+                    color: $grey;
+                    text-decoration: line-through;
+                }
+            }
+        }
+    } 
+    // Медиа запросы
+    @media screen and (max-width: 1024px) {
+        .specialProduct__wrapper {
+            justify-content: center;
+        }
+        .specialProduct__item {
+            margin: 15px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .specialProduct__title {
+            text-align: center;
+            font-size: 40px;
+        }
+        .specialProduct__wrapper {
+            .specialProduct__item {
+                .specialProduct__img {
+                    width: 100%;
+                }
+            }
+        }
+         
+    }
+    @media screen and (max-width: 320px) {
+        .specialProduct__title {
+            text-align: center;
+            font-size: 36px;
+        }         
+    }
+}

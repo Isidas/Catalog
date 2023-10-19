@@ -1,4 +1,26 @@
 // SCSS файл с основным (корневыми) настройками стилей
+<<<<<<< HEAD
+@import "./normolize.scss"; // Подключение normolize
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"); // Подключение шрифтов
+// Отключение боковой прокрутки
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
+// Центрирование контейнера
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 24px;
+}
+// Переменные цветов
+// colors
+$white: #ffffff;
+$grey: #888888;
+$black: #000000;
+=======
 @import './normolize.scss'; // Подключение normolize
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap'); // Подключение шрифтов
 // Отключение боковой прокрутки
@@ -19,3 +41,4 @@ body {
 $white: #FFFFFF;
 $grey: #888888;
 $black: #000000;
+>>>>>>> origin/main

@@ -1,0 +1,25 @@
+@import "../../style.scss";
+
+.basket {
+  background-image: url("../../servises/bg_basket.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 50vh;
+  .basket__main {
+    margin-top: 63px;
+    .basket__slogan {
+      margin-top: 127px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 70px;
+      color: $white;
+    }
+    // Блок медиа-запросов
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}
