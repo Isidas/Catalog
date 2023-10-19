@@ -1,0 +1,93 @@
+@import '../../style.scss'; // Корневые стили
+
+.product {
+    margin-top: 64px;
+    .product__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        color: $black;
+    }
+    .product__wrapper {
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .product__item {
+            margin: 45px 0;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            .product__img {
+                width: fit-content;
+            }
+            .product__name {
+                margin-top: 10px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: $black;
+            }
+            .product__subname {
+                margin-top: 9px;
+                max-width: 379px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: $grey;
+            }
+            .product__price {
+                margin-top: 12px;
+                display: flex;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: $black;
+            }
+        }
+    } 
+    .product__link {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+    }
+    // Медиа запросы
+    @media screen and (max-width: 1024px) {
+        .product__wrapper {
+            justify-content: center;
+            .product__item {
+                margin: 15px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .product__title {
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .product__title {
+            text-align: center;
+            font-size: 36px;
+        }
+        .product__wrapper {
+            .product__item {
+                .product__img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@import '../../style.scss';
+
+.catalogProduct__nav {
+    width: auto;
+    height: 20%;
+    margin: 64px 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .catalogProduct__link {
+        .link {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+            color: $black;
+            text-decoration: none;
+        }
+    }
+    .catalogDropdown {
+        position: relative;
+        width: 288px;
+        height: 41px;
+        border: 1px solid $grey;
+        border-radius: 20px;
+        .catalogDropdown__item {
+            position: absolute;
+            top: 11px;
+            left: 20px;
+            display: none;
+            list-style-type: none;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: $black;
+        }
+        .active {
+            display: block;
+        }
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 10px 0 10px;
+            border-color: $black transparent transparent transparent;
+        }
+    } 
+}
+.catalogProduct__showMore {
+    margin-top: 32px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+}

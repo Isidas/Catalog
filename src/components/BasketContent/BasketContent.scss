@@ -1,0 +1,121 @@
+@import '../../style.scss';
+
+.basketContent {
+    margin-top: 64px;
+    .basketContent__wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        .basketContent__product {
+            .basketContent__text {
+                display: flex;
+                justify-content: space-between;
+                .text {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $black;
+                }
+            }
+            .basketContent__item {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 14px;
+                border-top: 1px solid $grey;
+                padding: 25px 0 0 0;
+                .item__card {
+                    display: flex;
+                    .item__img {
+                        width: 173px;
+                        height: auto;
+                        margin: 0 30px 0 0;
+                    }
+                    .item__text {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        max-width: 45%;
+                        .item__title {
+                            margin: 0px 0 14px 0;
+                            font-family: 'Montserrat';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 24px;
+                            line-height: 29px;
+                            color: $black;
+                        }
+                        .item__description {
+                            margin-bottom: 16px;
+                            font-family: 'Montserrat';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: $grey;
+                        }
+                        .item__prise {
+                            font-family: 'Montserrat';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $black;
+                        }
+                        .item__remove {
+                            background-color: inherit;
+                            border: none;
+                            font-family: 'Montserrat';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 210%;
+                            color: $black;
+                            transition: 0.2s ease;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                
+                .item__counter {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 71px;
+                    height: 51px;
+                    background: #F7F6F6;
+                    border-radius: 6px;
+                    .item__number {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 210%;
+                    }
+                    .items__btns {
+                        display: flex;
+                        flex-direction: column;
+                        .item__btn {
+                            transform: rotate(270deg);
+                            margin-top: 5px;
+                            cursor: pointer;
+                            font-weight: 600;
+                            font-size: 14px;
+                            border: none;
+                            background: inherit;
+                            color: $grey;
+                        }
+                    }
+                }
+            }
+        }
+        .basketContent__makeOrder {
+            .makeOrder__title {
+                text-align: center;
+            }
+        }
+    }
+}

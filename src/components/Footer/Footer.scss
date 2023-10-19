@@ -1,0 +1,131 @@
+@import '../../style.scss'; // подключение корневых стилей
+
+
+.footer {
+    padding: 32px 0 40px 0;
+    margin-top: 64px;
+    background-color: #F7F6F6;
+    .footer__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        align-content: flex-start;
+        .footer__logo {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+            color: $black;
+            text-decoration: none;
+        }
+        .footer__info {
+            margin-top: -20px;
+            display: flex;
+            justify-content: center;
+            .footer__item {
+                margin: 0 50px 0 50px;
+                display: flex;
+                flex-direction: column;
+                .footer__title {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: $black;
+                }
+                .footer__link {
+                    margin-bottom: 12px;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $grey;
+                    text-decoration: none;
+                    
+                }
+                .footer__icons {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .footer__form {
+            .footer__appeal {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+                color: $black;
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+                .footer__input {
+                    margin-top: 16px;
+                    width: 275px;
+                    height: 46px;
+                    padding-left: 32px;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: $grey;
+                    background-color: inherit;
+                    border: 1px solid $grey;
+                    border-radius: 20px;
+                    outline: none;
+                }
+                .footer__btn {
+                    margin-top: 12px;
+                    height: 52px;
+                    background: rgba(222, 215, 215, 0.41);
+                    border: 1px solid $white;
+                    border-radius: 20px;
+                    &:hover {
+                        transition: 0.3s ease-in-out;
+                        background-color: $black;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    // Блок медиа-запросов для адаптива
+    @media screen and (max-width: 1024px) {
+        .footer__wrapper {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            .footer__info {
+                .footer__item {
+                    margin: 0 25px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 837px) {
+        .footer__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .footer__logo {
+                margin: 10px;
+            }
+            .footer__form {
+                margin: 10px;
+            }
+        }
+    }
+    @media screen and (max-width: 560px) {
+        .footer__wrapper {
+            .footer__form {
+                padding: 20px 30px;
+                border-top: 1px solid $grey;
+                margin-top: 25px;
+            }
+        }
+    }
+}

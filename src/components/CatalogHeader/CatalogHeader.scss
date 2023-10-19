@@ -1,0 +1,27 @@
+@import "../../style.scss";
+
+.catalog {
+  background-image: url("../../servises/bg_catalog.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 50vh;
+  .container {
+    .catalog__main {
+      margin-top: 63px;
+      .catalog__slogan {
+        margin-top: 127px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 70px;
+        color: $white;
+      }
+      // Блок медиа-запросов
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+}

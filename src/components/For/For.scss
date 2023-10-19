@@ -1,0 +1,74 @@
+@import '../../style.scss'; // Импорт стилей
+
+.for {
+    margin-top: 74px;
+    .for__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        color: $black;
+    }
+    .for__content {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 15px;
+        grid-template-areas: 
+        "first first first second second second"
+        "third third fourth fourth fifth fifth";
+        .for__item {
+            position: relative;
+            .item__img {
+                width: 100%;
+                z-index: 50;
+            }
+            .item__description {
+                position: absolute;
+                z-index: 100;
+                top: 43%;
+                right: 35%;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 34px;
+                line-height: 41px;
+                color: $white;
+                text-decoration: none;
+            } 
+        }
+        #first {
+            grid-area: first;
+        }
+        #second {
+            grid-area: second;
+        }
+        #third {
+            grid-area: third;
+        }
+        #fourth {
+            grid-area: fourth;
+        }
+        #fifth {
+            grid-area: fifth;
+        }
+        // Блок медиа-запросов для адаптива
+        @media screen and (max-width: 1024px) {
+            column-gap: 20px;
+            gap: 20px;
+            .for__item {
+                .item__img {
+                }
+                .item__description {
+                    font-size: 24px;
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
